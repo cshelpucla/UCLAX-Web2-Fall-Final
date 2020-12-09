@@ -1,7 +1,8 @@
-import auction from '../../common/static-data/auction'
+
 import { ActionTypes } from '../user/actionTypes.js';
 const defaultState = {
-    bids: [],    
+    isLoggedIn: false,
+    profile: {},
 }
 
 const userReducer = (state = defaultState, action) => {
@@ -9,7 +10,7 @@ const userReducer = (state = defaultState, action) => {
         case ActionTypes.USER_AUTH_UPDATE:
             return {
                 ...state,
-                isLoggedIn: auction.isLoggedIn,
+                isLoggedIn: action.isLoggedIn,
                 profile: action.profile
             }
         default: return state;

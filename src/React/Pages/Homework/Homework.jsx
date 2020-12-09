@@ -108,6 +108,41 @@ const essays = [
            </div>
        )
    }
+   },
+   { title: 'Q10',
+   question: 'Diff const, let, var',
+   AnswerComponent: () => {
+       return (            
+           <div>                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aperiam nam libero hic. Optio perferendis facilis saepe nemo asperiores nostrum? Facilis eligendi natus dolorem illo pariatur distinctio, nemo quas deleniti?</p>   
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum odio rerum, quisquam quidem ea qui earum maxime fugiat repellat iusto quibusdam culpa consequatur sunt quam iure magni, doloribus temporibus.</p>   
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero veritatis molestiae debitis error laudantium, voluptatem nihil sunt, excepturi aut voluptate, amet doloremque quidem dicta nam deleniti facere. Totam, dolor cumque!</p>   
+           </div>
+       )
    }
-
+   },
+   { title: 'Q12',
+   question: 'What is a controlled input?',
+   AnswerComponent: () => {
+       return (            
+           <div>                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aperiam nam libero hic. Optio perferendis facilis saepe nemo asperiores nostrum? Facilis eligendi natus dolorem illo pariatur distinctio, nemo quas deleniti?</p>   
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum odio rerum, quisquam quidem ea qui earum maxime fugiat repellat iusto quibusdam culpa consequatur sunt quam iure magni, doloribus temporibus.</p>   
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero veritatis molestiae debitis error laudantium, voluptatem nihil sunt, excepturi aut voluptate, amet doloremque quidem dicta nam deleniti facere. Totam, dolor cumque!</p>   
+           </div>
+       )
+   }
+   },
+   { title: 'Q13',
+   question: 'Which is more important, Server-Side or Client-Side validation and why?',
+   AnswerComponent: () => {
+       return (            
+           <div>                
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem aperiam nam libero hic. Optio perferendis facilis saepe nemo asperiores nostrum? Facilis eligendi natus dolorem illo pariatur distinctio, nemo quas deleniti?</p>   
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nostrum odio rerum, quisquam quidem ea qui earum maxime fugiat repellat iusto quibusdam culpa consequatur sunt quam iure magni, doloribus temporibus.</p>   
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero veritatis molestiae debitis error laudantium, voluptatem nihil sunt, excepturi aut voluptate, amet doloremque quidem dicta nam deleniti facere. Totam, dolor cumque!</p>   
+           </div>
+       )
+   }
+   }
 ];

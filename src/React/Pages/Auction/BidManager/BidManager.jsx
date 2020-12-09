@@ -7,13 +7,14 @@ import Bids from './Bids/Bids'
 
 const BidManager = () => {
 
-    const { bidManager: {bids}} = useSelector ((state) => state );
-
+    const { bidManager: {current: {bids}} } = useSelector ((state) => state );
+    
     // functional component logic
     return (
         <BidManagerStyled classname='BidManager'>
-            BidManager
-            <Bids bids={bids}/>
+            BidManager {
+               (bids && bids.length ) > 0 ? <Bids bids={bids}/> : 'Currently you have no lots'
+            }
         </BidManagerStyled>
     )
 }

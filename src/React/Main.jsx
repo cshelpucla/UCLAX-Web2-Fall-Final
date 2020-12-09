@@ -1,6 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import {useDispatch, useSelect, useSelector} from 'react-redux';
 import styled from 'styled-components';
+import _ from 'lodash';
+
+
+/* Scriptt */
+import * as AuctionActions from 'Redux/auction/actions'
+import * as UserActions from 'Redux/user/actions'
 
 /* Components ---------------------------*/
 import Header from './Shared/Header.jsx';
@@ -13,6 +20,17 @@ import Footer from './Shared/Footer.jsx';
 
 const Main = () => {
     //console.log('Main', auction.id);
+    const dispatch = useDispatch();
+
+    const { auction    } = useSelector((state) => state)
+
+    useEffect(() => {
+        dispatch (AuctionActions.loadAuctions())
+        dispatch (UserActions.loadUser())
+    }, [dispatch]);
+
+    if (_.isEmpty(auction.current)) {return 'Preloading' }   
+
     return (
         <MainStyled className='Main'>
             <BrowserRouter>

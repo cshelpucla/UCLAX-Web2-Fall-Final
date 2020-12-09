@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Context from '../context/index.js'
 import * as UFActions from '../context/actions'
 
-const Input = ({formField, onChange}) => {
+const Textarea = ({formField, onChange}) => {
 
     const {state, dispatch} =  useContext(Context)
 
@@ -18,7 +18,7 @@ const Input = ({formField, onChange}) => {
     }
 
     return (
-        <InputStyled    className='Input' 
+        <TextareaStyled    className='Input' 
                         id={formField.id} 
                         name={formField.id} 
                         value={formField.value} 
@@ -28,9 +28,9 @@ const Input = ({formField, onChange}) => {
     )
 }
 
-export default Input;
+export default Textarea;
 
-const InputStyled = styled.input`
+const TextareaStyled = styled.textarea`
     background-color: #fff;
     font-size: 16px;
     padding: 5px 10px;

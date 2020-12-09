@@ -9,11 +9,22 @@ import Button from '../Controls/Button';
 */
 
 import Input from '../Controls/Input';
+import Textarea from '../Controls/Textarea';
 
 const LabelInput = ({formField}) => {
     // functional component logic
     
     //console.log('LabelInput auction',auction)
+    let ControlComponent;
+
+    switch (formField.type) {
+        case 'textarea':
+            ControlComponent = Textarea;
+            break;
+        default:
+            ControlComponent = Input;
+            break;
+    }
 
     return (
         <LabelInputStyled  className='LabelInput'>
@@ -23,7 +34,7 @@ const LabelInput = ({formField}) => {
                     </label>
                 </div>
                 <div className='control'>
-                    <Input formField={formField}/>
+                    <ControlComponent formField={formField}/>
                 </div>
         </LabelInputStyled>
     )

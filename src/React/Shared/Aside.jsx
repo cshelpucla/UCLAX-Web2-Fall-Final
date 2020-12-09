@@ -18,7 +18,7 @@ const Aside = () => {
     */
 
     const { auction } = useSelector((state) => state )
-    console.log ('Aside : auction', auction)
+    //console.log ('Aside : auction', auction)
 
     return (
         <AsideStyled className='Aside'>

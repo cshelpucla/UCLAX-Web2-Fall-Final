@@ -2,20 +2,22 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import AddRemoveLot  from './AddRemoveLot';
 import Lightbox from '../../../Shared/UniversalForm/Controls/Lightbox'
+import  { useSelector } from 'react-redux'
 
 /* Scripts ---------------------------*/
 const Lot = ({lot, auctionID}) => {
 
-    console.log("From lot ", lot)
+    //console.log("From lot ", lot)
     const [isOpen, isOpenUpdate] = useState(false)
+    const { user } = useSelector((state)=> state)
 
     const handleOnClose = () => {
-        console.log('close lightbox')
+        //console.log('close lightbox')
         isOpenUpdate(false)
     }
 
     const handleOnOpen = () => {
-        console.log('open lightbox')
+        //console.log('open lightbox')
         isOpenUpdate(true)
     }
 
@@ -26,7 +28,9 @@ const Lot = ({lot, auctionID}) => {
                     onClick={handleOnOpen}
             />
             <h3>{ `Lot: ${lot.number}: ${lot.title}` }</h3>
-            <AddRemoveLot lot={lot}/>   
+            {
+                user.isLoggedIn && <AddRemoveLot lot={lot}/>
+            }            
             <Lightbox isOpen={isOpen} 
                 onClose={handleOnClose}
                 headerText={`Lot# ${lot.number}: ${lot.title}`}>
@@ -37,8 +41,9 @@ const Lot = ({lot, auctionID}) => {
                     <h3>{ `Lot: ${lot.number}: ${lot.title}` }</h3>
                     <div className="artist"><b>Artist:</b> {lot.artist}</div>
                     <div className="medium"><b>Medium:</b> {lot.medium}</div>
-
-                    <AddRemoveLot lot={lot}/>
+                    {
+                        user.isLoggedIn && <AddRemoveLot lot={lot}/>
+                    }
             </Lightbox>        
         </LotStyled>
     );

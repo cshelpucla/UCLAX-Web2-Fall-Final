@@ -3,28 +3,45 @@ import styled from 'styled-components';
 
 /* Redux ---------------------------*/
 import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
+/* Scripts */
+import * as BidManagerActions from 'Redux/bidManager/actions.js'
+import Button from 'React/Shared/UniversalForm/Controls/Button.jsx'
 
 /* Components ---------------------------*/
 import Bid from './Bid.jsx';
-const Bids = () => {
-    const { auction } = useSelector((state) => state);
+import BidManager from '../BidManager.jsx';
+
+
+const Bids = ({ bids }) => {
+    const dispatch = useDispatch();
+    const history = useHistory()
+
+    const handleSubmitBids = () => {
+        dispatch(BidManagerActions.submitBids(handleRedirect))
+    }
+
+    const handleRedirect = () => {
+        history.push('/auction/thanks')
+    }
+
     return (
         <BidsStyled className='Bids'>
-            <h2>Bids</h2>
-            <div className="Bids-container">
                 {
-                    auction.Bids.map((lot, idx) => {
+                    bids.map((bid, idx) => {
                         return <Bid
                                     key={ idx }
-                                    lot={ lot }
-                                    auctionID={ auction.id }
+                                    bid={ bid }                                    
                                 />
                     })
                 }
-            </div>
+                <Button onClick= { handleSubmitBids } >Submit bids</Button>
         </BidsStyled>
     );
 }
+
 export default Bids;
 const BidsStyled = styled.div`
     .Bids-container {

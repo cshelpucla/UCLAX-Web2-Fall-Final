@@ -1,15 +1,11 @@
-const staff = require('./staff/staff.js');
-const services = require('./services/services.js');
-const slides = require('./slides/slides.js');
-const email = require('./email/email.js');
-const login = require('./login/login.js');
+const auctions = require('./auctions/auctions.js');
+const users = require('./users/users.js');
+const bidSubmission = require('./bidSubmission/bidSubmission.js');
 
 const routes = {
-    staff: staff,
-    services: services,
-    slides: slides,
-    email: email,
-    login: login,
+    auctions: auctions,
+    users: users,
+    bidSubmission: bidSubmission
 }
 
 module.exports = routes;
