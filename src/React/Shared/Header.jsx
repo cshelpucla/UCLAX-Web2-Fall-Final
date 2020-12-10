@@ -8,7 +8,8 @@ import Login from './Login/Login.jsx';
 const Header = () => {
     return (
         <HeaderStyled className='Header'>
-            <Logo />
+            {/*<Logo />*/}
+            <h5>Final Project</h5>
             <Login />
         </HeaderStyled>
     );
@@ -22,6 +23,6 @@ const HeaderStyled = styled.header`
     .Login {
         position: absolute;
         right: 20px;
-        top: 20px;
+        top: 5px;
     }
 `;

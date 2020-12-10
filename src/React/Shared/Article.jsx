@@ -5,7 +5,7 @@ const Article = ({children}) => {
     // functional component logic
     return (
         <ArticleStyled className="Article">
-            <h2>Article</h2>
+            {/*<h2>Article</h2>*/}
             {children}
         </ArticleStyled>
     )

@@ -13,7 +13,7 @@ const Template = ({title, children, aside=true}) => {
         <TemplateStyled className='Template'>
             {aside && <Aside />}
             <Article>
-                <h1>{title}</h1>
+                {/*<h1>{title}</h1> */}
                 <div className='content'>
                     {children}
                 </div>

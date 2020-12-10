@@ -34,7 +34,6 @@ const Main = () => {
     return (
         <MainStyled className='Main'>
             <BrowserRouter>
-                <h1>In Class</h1>
                 <Header />
                 <Nav />
                 <Content />
