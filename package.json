@@ -28,7 +28,7 @@
         "redux-thunk": "^2.3.0",
         "styled-components": "^5.2.0",
         "survey-creator": "^1.8.20",
-        "survey-react": "^1.8.20",
+        "survey-react": "^1.8.20",        
         "bootstrap": "^3.3.7"
     },
     "devDependencies": {
